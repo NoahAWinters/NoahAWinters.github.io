@@ -1,0 +1,46 @@
+:root {
+    --hero-color: #555b6e;
+    --hero-accent: #89b0ae;
+    --bg-color: #bee3db;
+    --bg-accent: #faf9f9;
+    --root-accent: #ffd6ba;
+}
+
+
+
+
+section {
+    height: 500px;
+    background-color: var(--bg-color);
+    border: solid black 1px;
+}
+
+.hero {
+    background-color: var(--hero-color);
+    color: white;
+    font-size: 40px;
+    height: 100vh;
+}
+
+footer {
+    height: 500px;
+    background-color: var(--root-accent);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    width: 500px;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+li {
+    /*width: 200px;*/
+    text-decoration: none;
+}
