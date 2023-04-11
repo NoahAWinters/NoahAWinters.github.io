@@ -85,14 +85,24 @@ p {
 }
 
 .button:hover {
-    background-color: black;
+    background-color: white;
+    color: var(--hero-accent)
 }
 
 .button:active {
-    background-color: green;
+    background-color: (--root-accent);
     color: yellowgreen;
 }
 
+.socials {
+    padding-bottom: 200px;
+}
+
 .social {
-    padding-bottom: 600px;
+    margin: 10px;
+}
+
+.logo {
+    height: 90px;
+    margin: 30px;
 }
