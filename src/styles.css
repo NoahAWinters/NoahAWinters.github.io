@@ -85,7 +85,8 @@ p {
 }
 
 .button:hover {
-    background-color: black;
+    background-color: white;
+    color: gray
 }
 
 .button:active {
@@ -93,6 +94,15 @@ p {
     color: yellowgreen;
 }
 
-.social {
+.socials {
     padding-bottom: 600px;
+}
+
+.social {
+    margin: 20px;
+}
+
+.logo {
+    height: 80px;
+    margin: 30px;
 }
