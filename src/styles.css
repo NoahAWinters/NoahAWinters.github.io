@@ -12,9 +12,9 @@ body {
 
 
 section {
-    height: 500px;
+
     background-color: var(--bg-color);
-    border: solid black 1px;
+    /*border: solid black 1px;*/
 }
 
 footer {
@@ -33,6 +33,8 @@ ul {
     width: 500px;
     justify-content: space-around;
     font-size: 30px;
+    padding-right: 50px;
+
 }
 
 li {
@@ -46,8 +48,12 @@ h1 {
     margin: 0;
 }
 
+h2 {
+    font-size: 45px;
+}
+
 p {
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 400;
     margin: 0;
 }
@@ -105,4 +111,51 @@ p {
 .logo {
     height: 80px;
     margin: 30px;
+}
+
+.subsection {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px;
+}
+
+.subsection-alt {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px;
+}
+
+.information {
+    font-size: 20px;
+
+}
+
+.headshot {
+    width: 300px;
+    height: 300px;
+    border-radius: 75px;
+}
+
+.headshot-container {
+    display: flex;
+    align-items: center;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project {
+    width: 400px;
+    height: 500px;
+    /*border: 1px solid black;*/
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 20px gray;
+}
+
+.project-description {
+    font-size: 15px;
+    font-weight: 400px;
 }
