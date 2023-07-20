@@ -1,4 +1,4 @@
-<!--1:06:25-->
+<!--1:15:25-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="src/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/459fc8d5be.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
@@ -22,16 +23,16 @@
         <nav>
             <img class="logo" src="src/images/logo_ph.png" alt="Logo" />
             <ul>
-                <li>About me</li>
-                <li>My projects</li>
-                <li>Contact me</li>
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#my-projects">My projects</a></li>
+                <li><a href="#contact-info">Contact me</a></li>
             </ul>
         </nav>
-        <div class=" content">
+        <div class="content">
             <div class="hero-text">
                 <h1>Noah Winters</h1>
                 <p>Full Stack Developer</p>
-                <div class="button">About me</div>
+                <div class="button"><a href="#about-me">About Me</a></div>
             </div>
             <div class="socials">
                 <div>
@@ -65,10 +66,10 @@
         </div>
 
     </section>
-    <section class="subsection">
+    <section class="subsection" id="about-me">
         <div class="information">
             <h2>About Me</h2>
-            <p>Insert about me text here. Lorem Ipsum is simply dummy text of the printing and
+            <p class="cutoff-text">Insert about me text here. Lorem Ipsum is simply dummy text of the printing and
                 typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
                 an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
                 not only five
@@ -80,7 +81,7 @@
             <img class="headshot" src="src/images/VideoGameDunkeyProfileLogo.jpeg" alt="myFace" />
         </div>
     </section>
-    <section class="subsection-alt">
+    <section class="subsection-alt" id="my-projects">
         <h2>Projects</h2>
         <div class="projects">
             <div class="project">
@@ -89,15 +90,22 @@
                 <p class="project-description">3D-Platformer ive been working on since the winter of 2021. A passion
                     project thats a throwback to the 3d platforming games of the PS2 era</p>
                 <hr />
-                <p class="project-link">View here!</p>
+                <p><a class="project-link" href=" https://github.com/NoahAWinters/Platformer">View
+                        here!</a></p>
             </div>
             <div class="project">
 
             </div>
+
         </div>
         </div>
     </section>
-    <footer></footer>
+    <footer id="contact-info">
+        <h2>Contact Me</h2>
+        <p>
+            Noah@noahwinters.com
+        </p>
+    </footer>
 
 
     <script src="src/app.js"></script>

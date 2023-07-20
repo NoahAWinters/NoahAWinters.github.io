@@ -6,6 +6,10 @@
     --color4: #EFF6E0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Caudex', serif;
 }
@@ -25,6 +29,11 @@ footer {
 nav {
     display: flex;
     justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 ul {
@@ -63,7 +72,16 @@ p {
 hr {
     margin-left: 20px;
     margin-right: 20px;
+    color: #01161E;
 }
+
+footer {
+    color: var(--color0);
+    padding: 5px;
+    text-align: center;
+}
+
+
 
 .hero {
     background-color: var(--color0);
@@ -75,6 +93,7 @@ hr {
 .hero-text {
     margin-left: 80px;
     margin-bottom: 600px;
+    cursor: default;
 }
 
 .content {
@@ -103,10 +122,21 @@ hr {
     cursor: pointer;
 }
 
+.button:hover a {
+    color: var(--color2);
+}
+
 .button:active {
     background-color: var(--color3);
     color: white;
 }
+
+.button:active a {
+    background-color: var(--color3);
+    color: white;
+}
+
+
 
 .socials {
     padding-bottom: 600px;
@@ -134,25 +164,43 @@ hr {
     padding: 60px;
 }
 
+.subsection-alt h2 {
+    color: var(--color4);
+}
+
 .information {
     font-size: 20px;
     color: var(--color4);
 }
 
+.information p {
+
+    max-width: 60rem;
+}
+
 .headshot {
     width: 300px;
     height: 300px;
-    border-radius: 75px;
+    border-radius: 80px;
+
 }
 
 .headshot-container {
     display: flex;
     align-items: center;
+
 }
 
 .projects {
     display: flex;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 1000px) {
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .project {
@@ -164,6 +212,8 @@ hr {
     margin: 10px;
 }
 
+
+
 .project-description {
     font-size: 15px;
     font-weight: 400px;
@@ -171,6 +221,11 @@ hr {
 
 .project-image {
     width: 200px;
-    border-radius: 75px;
+    border-radius: 60px;
     margin-top: 25px;
+}
+
+.project a {
+    text-decoration: none;
+    color: var(--color2);
 }
