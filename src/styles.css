@@ -1,9 +1,9 @@
 :root {
-    --hero-color: #555b6e;
-    --hero-accent: #89b0ae;
-    --bg-color: #bee3db;
-    --bg-accent: #faf9f9;
-    --root-accent: #ffd6ba;
+    --color0: #01161E;
+    --color1: #124559;
+    --color2: #598392;
+    --color3: #aec3b0;
+    --color4: #EFF6E0;
 }
 
 body {
@@ -13,13 +13,13 @@ body {
 
 section {
 
-    background-color: var(--bg-color);
+    background-color: var(--color1);
     /*border: solid black 1px;*/
 }
 
 footer {
     height: 500px;
-    background-color: var(--root-accent);
+    background-color: var(--color3);
 }
 
 nav {
@@ -46,6 +46,7 @@ h1 {
     font-size: 90px;
     font-weight: 700;
     margin: 0;
+
 }
 
 h2 {
@@ -56,10 +57,16 @@ p {
     font-size: 20px;
     font-weight: 400;
     margin: 0;
+
+}
+
+hr {
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .hero {
-    background-color: var(--hero-color);
+    background-color: var(--color0);
     color: white;
     font-size: 40px;
     height: 100vh;
@@ -80,7 +87,7 @@ p {
 .button {
     width: 175px;
     height: 50px;
-    background-color: var(--hero-accent);
+    background-color: var(--color2);
     color: white;
     text-align: center;
     border-radius: 15px;
@@ -92,12 +99,13 @@ p {
 
 .button:hover {
     background-color: white;
-    color: gray
+    color: var(--color2);
+    cursor: pointer;
 }
 
 .button:active {
-    background-color: green;
-    color: yellowgreen;
+    background-color: var(--color3);
+    color: white;
 }
 
 .socials {
@@ -128,7 +136,7 @@ p {
 
 .information {
     font-size: 20px;
-
+    color: var(--color4);
 }
 
 .headshot {
@@ -153,9 +161,16 @@ p {
     /*border: 1px solid black;*/
     background-color: whitesmoke;
     box-shadow: 5px 5px 20px gray;
+    margin: 10px;
 }
 
 .project-description {
     font-size: 15px;
     font-weight: 400px;
+}
+
+.project-image {
+    width: 200px;
+    border-radius: 75px;
+    margin-top: 25px;
 }
