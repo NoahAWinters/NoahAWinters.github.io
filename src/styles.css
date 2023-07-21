@@ -16,6 +16,9 @@ html {
 body {
     font-family: 'Caudex', serif;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
 }
 
 
@@ -26,7 +29,7 @@ section {
 }
 
 footer {
-    height: 500px;
+    height: 60%;
     background-color: var(--color3);
 }
 
@@ -40,13 +43,17 @@ a {
     color: var(--color5);
 }
 
+a:hover {
+    color: var(--color4);
+}
+
 ul {
     display: flex;
     list-style-type: none;
-    width: 500px;
+    width: 30%;
     justify-content: space-around;
     font-size: 30px;
-    padding-right: 50px;
+    padding-right: 3rem;
 }
 
 ul.show {
@@ -59,39 +66,49 @@ li {
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 5.625rem;
     font-weight: 700;
     margin: 0;
     line-height: 1.1;
-    letter-spacing: -1.2px;
+    letter-spacing: -.075rem;
 
 }
 
 h2 {
-    font-size: 45px;
+    font-size: 2.813rem;
     line-height: 1.3;
-    letter-spacing: -.51px;
+    letter-spacing: -.031rem;
+
 
 }
 
 p {
-    font-size: 20px;
+    font-size: 1.25rem;
+    text-size-adjust: auto;
     font-weight: 400;
     margin: 0;
     line-height: 1.5;
 }
 
 hr {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
     color: #01161E;
 }
 
 footer {
     color: var(--color0);
-    padding: 5px;
+    padding: 3%;
     text-align: center;
 }
+
+
+
+
 
 
 
@@ -100,13 +117,13 @@ footer {
     background-image:
         linear-gradient(-15deg, transparent 35%, var(--color0) 55%);
     color: var(--color5);
-    font-size: 40px;
+    font-size: 2.5rem;
     height: 100vh;
 }
 
 .hero-text {
-    margin-left: 80px;
-    margin-bottom: 600px;
+    margin-left: 5%;
+    margin-bottom: 20%;
     cursor: default;
 }
 
@@ -118,20 +135,20 @@ footer {
 }
 
 .button {
-    width: 175px;
-    height: 50px;
+    width: 12rem;
+    height: 3rem;
     background-color: var(--color2);
     color: var(--color5);
     text-align: center;
-    border-radius: 15px;
-    padding-top: 10px;
-    margin-top: 60px;
-    font-size: 30px;
+    border-radius: 3rem;
+    padding-top: .5rem;
+    margin-top: 2.25rem;
+    font-size: 1.875rem;
     font-weight: 400;
 }
 
 .button:hover {
-    background-color: var(--color5);
+    background-color: var(--color4);
     color: var(--color2);
     cursor: pointer;
 }
@@ -142,7 +159,7 @@ footer {
 
 .button:active {
     background-color: var(--color3);
-    color: var(--color5);
+
 }
 
 .button:active a {
@@ -151,33 +168,33 @@ footer {
 }
 
 .socials {
-    padding-bottom: 50;
+    padding-bottom: 5rem;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 5rem;
 }
 
 .social {
-    margin: 20px;
+    margin: 2rem;
 }
 
 .logo {
-    height: 80px;
-    margin-left: 30px;
-    padding-top: 10px;
+    height: 8rem;
+    margin-left: 2rem;
+    padding-top: .625rem;
 }
 
 .subsection {
     display: flex;
     justify-content: space-around;
-    padding: 60px;
+    padding: 8%;
 }
 
 .subsection-alt {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 60px;
+    padding: 8%;
 }
 
 .subsection-alt h2 {
@@ -185,26 +202,20 @@ footer {
 }
 
 .information {
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--color4);
-}
-
-.information p {
-
     max-width: 60rem;
 }
 
 .headshot {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     border-radius: 80px;
-
 }
 
 .headshot-container {
     display: flex;
     align-items: center;
-
 }
 
 .projects {
@@ -212,39 +223,56 @@ footer {
     justify-content: space-around;
 }
 
-.project {
-    width: 400px;
-    height: 500px;
-    /*border: 1px solid black;*/
-    background-color: whitesmoke;
+.project_card {
+    position: relative;
+    width: 26rem;
+    height: 26rem;
+    border-radius: 25px;
+    background-color: var(--color4);
     box-shadow: 5px 5px 20px gray;
-    margin: 10px;
+    margin: 30px;
+    transition: .5s;
+}
+
+.project_card p {
+    margin-right: 40px;
+    margin-left: 40px;
+    height: 35%;
+    display: block;
+}
+
+.project_card a {
+    text-decoration: none;
+    color: var(--color2);
+    margin-top: 30px;
+}
+
+.project_card:hover {
+    background-color: var(--color3);
+    width: 27rem;
 }
 
 .project-description {
-    font-size: 15px;
-    font-weight: 400px;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .project-image {
-    width: 200px;
-    border-radius: 60px;
-    margin-top: 25px;
+    max-height: 200px;
+    border-radius: 10px;
+    margin-top: -60px;
+    box-shadow: 5px 5px 20px slategray;
+    overflow: hidden;
 }
 
-.project a {
-    text-decoration: none;
-    color: var(--color2);
-}
 
 .hamburger {
     display: none;
 }
 
-.hamburger:focus {
-    outline: 0;
+.hamburger:hover {
+    color: var(--color3);
 }
-
 
 
 @media only screen and (max-width: 1000px) {
@@ -253,38 +281,53 @@ footer {
         flex-wrap: wrap;
     }
 
+    .hero-text {
+        /* padding-top: 10%; */
+        margin-bottom: 80%;
+        margin-top: 20%;
+        margin-left: 5%;
+        cursor: default;
+    }
+
     .hamburger {
         display: block;
         border: 0;
         background-color: transparent;
         color: var(--color5);
         font-size: 30px;
-        margin: 30px;
+        margin: 20px;
         align-self: flex-end;
-
     }
 
     ul {
         display: none;
         background-color: var(--color00);
         margin: 0px;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 
     ul.show {
         display: block;
+        list-style-type: none;
+        width: 40%;
+        justify-content: space-around;
+        font-size: 30px;
+        padding-right: 50px;
     }
 
     nav {
-
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
         background-color: var(--color00);
-
     }
 
     .logo {
         display: none;
+    }
+
+    .headshot-container {
+        display: none;
+        /* align-items: flex-end; */
     }
 }
