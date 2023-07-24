@@ -1,5 +1,4 @@
 :root {
-
     --color0: #01161E;
     --color00: #081E26;
     --color1: #124559;
@@ -223,7 +222,7 @@ footer {
     justify-content: space-around;
 }
 
-.project_card {
+.project-card {
     position: relative;
     width: 26rem;
     height: 26rem;
@@ -234,20 +233,13 @@ footer {
     transition: .5s;
 }
 
-.project_card p {
-    margin-right: 40px;
-    margin-left: 40px;
-    height: 35%;
-    display: block;
-}
-
-.project_card a {
+.project-card a {
     text-decoration: none;
     color: var(--color2);
     margin-top: 30px;
 }
 
-.project_card:hover {
+.project-card:hover {
     background-color: var(--color3);
     width: 27rem;
 }
@@ -255,7 +247,14 @@ footer {
 .project-description {
     font-size: 1rem;
     font-weight: 400;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20rem;
+    height: 35%;
+
+    display: block;
 }
+
 
 .project-image {
     max-height: 200px;
@@ -279,14 +278,23 @@ footer {
     .projects {
         display: flex;
         flex-wrap: wrap;
+        gap: 2%;
+    }
+
+    .project-description {
+        font-size: .8rem;
+        font-weight: 300;
+        width: 15rem;
     }
 
     .hero-text {
         /* padding-top: 10%; */
         margin-bottom: 80%;
+        padding-top: 10rem;
         margin-top: 20%;
         margin-left: 5%;
         cursor: default;
+        display: block;
     }
 
     .hamburger {
