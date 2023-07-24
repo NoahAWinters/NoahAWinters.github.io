@@ -1,11 +1,15 @@
 :root {
+
     --color0: #01161E;
-    --color00: #081E26;
     --color1: #124559;
     --color2: #598392;
     --color3: #aec3b0;
     --color4: #EFF6E0;
     --color5: #FDFEFF;
+
+    --uiColorConfirm: lightgreen;
+    --uiColorForbidden: red;
+    --uiColorShadow: #081E26;
 }
 
 html {
@@ -19,6 +23,37 @@ body {
     box-sizing: border-box;
 
 }
+
+button {
+    width: 12rem;
+    height: 3rem;
+    background-color: var(--color2);
+    color: var(--color5);
+    text-align: center;
+    border-radius: .625rem;
+    margin-top: 2.25rem;
+    font-size: 1.875rem;
+    font-weight: 400;
+    border: none;
+}
+
+button:hover {
+    background-color: var(--color3);
+    color: var(--color5);
+    cursor: pointer;
+    color: var(--color5);
+}
+
+button:active {
+    background-color: var(--uiColorConfirm);
+    color: var(--color5);
+}
+
+button a {
+    text-decoration: none;
+    pointer-events: none;
+}
+
 
 
 section {
@@ -44,6 +79,10 @@ a {
 
 a:hover {
     color: var(--color4);
+}
+
+a:active {
+    color: var(--uiColorConfirm);
 }
 
 ul {
@@ -105,8 +144,44 @@ footer {
     text-align: center;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--color4);
+    box-shadow: 5px 5px 20px var(--uiColorShadow);
+    border-radius: 1rem;
+}
 
+form h3 {
+    color: var(--color0);
+    font-size: 3rem;
+    font-weight: 800;
+}
 
+form input,
+form textarea {
+    color: var(--color0);
+    font-size: 1rem;
+    border: 0;
+    margin: .625rem 0;
+    padding: 1.25rem;
+    outline: none;
+    background-color: var(--color5);
+    resize: none;
+}
+
+form button {
+    border-radius: .625rem;
+    margin-top: 1rem;
+    padding-left: auto;
+    padding-right: auto;
+    width: 100%;
+    font-size: 2rem;
+    max-width: 600px;
+}
 
 
 
@@ -124,6 +199,7 @@ footer {
     margin-left: 5%;
     margin-bottom: 20%;
     cursor: default;
+
 }
 
 .content {
@@ -131,39 +207,6 @@ footer {
     height: 100%;
     justify-content: space-between;
     align-items: center;
-}
-
-.button {
-    width: 12rem;
-    height: 3rem;
-    background-color: var(--color2);
-    color: var(--color5);
-    text-align: center;
-    border-radius: 3rem;
-    padding-top: .5rem;
-    margin-top: 2.25rem;
-    font-size: 1.875rem;
-    font-weight: 400;
-}
-
-.button:hover {
-    background-color: var(--color4);
-    color: var(--color2);
-    cursor: pointer;
-}
-
-.button:hover a {
-    color: var(--color2);
-}
-
-.button:active {
-    background-color: var(--color3);
-
-}
-
-.button:active a {
-    background-color: var(--color3);
-    color: var(--color5);
 }
 
 .socials {
@@ -226,9 +269,9 @@ footer {
     position: relative;
     width: 26rem;
     height: 26rem;
-    border-radius: 25px;
+    border-radius: 1.5rem;
     background-color: var(--color4);
-    box-shadow: 5px 5px 20px gray;
+    box-shadow: 5px 5px 20px var(--uiColorShadow);
     margin: 30px;
     transition: .5s;
 }
@@ -251,16 +294,15 @@ footer {
     margin-left: auto;
     width: 20rem;
     height: 35%;
-
     display: block;
 }
 
 
 .project-image {
     max-height: 200px;
-    border-radius: 10px;
+    border-radius: .625rem;
     margin-top: -60px;
-    box-shadow: 5px 5px 20px slategray;
+    box-shadow: 5px 5px 20px var(--uiColorshadow);
     overflow: hidden;
 }
 
@@ -271,6 +313,22 @@ footer {
 
 .hamburger:hover {
     color: var(--color3);
+    background-color: transparent;
+}
+
+.hamburger:active {
+    color: var(--color4);
+}
+
+.contact-form {
+    width: 100%;
+    height: 50vh;
+    margin-top: 3.7rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -281,6 +339,7 @@ footer {
         gap: 2%;
     }
 
+
     .project-description {
         font-size: .8rem;
         font-weight: 300;
@@ -288,7 +347,7 @@ footer {
     }
 
     .hero-text {
-        /* padding-top: 10%; */
+
         margin-bottom: 80%;
         padding-top: 10rem;
         margin-top: 20%;
@@ -309,7 +368,7 @@ footer {
 
     ul {
         display: none;
-        background-color: var(--color00);
+        background-color: var(--uiColorshadow);
         margin: 0px;
         padding-bottom: 20px;
     }
@@ -327,7 +386,7 @@ footer {
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
-        background-color: var(--color00);
+        background-color: var(--uiColorshadow);
     }
 
     .logo {
@@ -336,6 +395,6 @@ footer {
 
     .headshot-container {
         display: none;
-        /* align-items: flex-end; */
+
     }
 }

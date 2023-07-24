@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="src/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <script src="https://kit.fontawesome.com/459fc8d5be.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
@@ -33,7 +35,8 @@
             <div class="hero-text">
                 <h1 class="my_name">Noah Winters</h1>
                 <p>Full Stack Developer</p>
-                <div class="button"><a href="#about-me">About Me</a></div>
+                <!-- <div class="button"><a href="#about-me">About Me</a></div> -->
+                <button><a href="#about-me">About Me</a></button>
             </div>
         </div>
 
@@ -84,9 +87,18 @@
     <footer id="contact-info">
         <h2>Contact Me</h2>
         <p>
-            noah@noahwinters.com<br>(518)444-2099
+            <!-- noah@noahwinters.com<br>(518)444-2099 -->
         </p>
-
+        <div class="contact-form">
+            <form onsubmit="sendEmail()">
+                <h3>Want to get in touch?</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone Number">
+                <textarea id="" message" rows="4" placeholder="Message"></textarea>
+                <button type="Submit">Submit</button>
+            </form>
+        </div>
         <div class="socials">
             <div>
                 <a href="https://github.com/NoahAWinters" class="social">
@@ -114,8 +126,6 @@
             </div>
         </div>
     </footer>
-
-
     <script src="src/app.js"></script>
 </body>
 
