@@ -21,16 +21,16 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    background-color: #598392;
 }
 
 button {
-    width: 12rem;
-    height: 3rem;
+    width: fit-content;
+    height: fit-content;
     background-color: var(--color2);
     color: var(--color5);
     text-align: center;
-    border-radius: .625rem;
+    border-radius: .75rem;
     margin-top: 2.25rem;
     font-size: 1.875rem;
     font-weight: 400;
@@ -39,7 +39,6 @@ button {
 
 button:hover {
     background-color: var(--color3);
-    color: var(--color5);
     cursor: pointer;
     color: var(--color5);
 }
@@ -47,19 +46,22 @@ button:hover {
 button:active {
     background-color: var(--uiColorConfirm);
     color: var(--color5);
+
 }
 
-button a {
+button a,
+button a:hover,
+button a:active {
     text-decoration: none;
-    pointer-events: none;
+    color: var(--color5);
+    display: block;
+    padding: 1rem;
 }
 
 
 
 section {
-
     background-color: var(--color1);
-    /*border: solid black 1px;*/
 }
 
 footer {
@@ -99,7 +101,6 @@ ul.show {
 }
 
 li {
-    /*width: 200px;*/
     text-decoration: none;
 }
 
@@ -187,12 +188,12 @@ form button {
 
 
 .hero {
-    background-color: var(--color1);
-    background-image:
-        linear-gradient(-15deg, transparent 35%, var(--color0) 55%);
     color: var(--color5);
     font-size: 2.5rem;
     height: 100vh;
+
+    /*Background*/
+    background: linear-gradient(45deg, rgb(36, 18, 78), transparent), repeating-linear-gradient(45deg, rgb(46, 24, 54) 0%, rgb(46, 24, 54) 5%, transparent 5%, transparent 10%, rgb(36, 18, 78) 10%, rgb(36, 18, 78) 11%, transparent 11%, transparent 12%), green repeating-linear-gradient(-45deg, rgba(46, 24, 54, 0.5) 0%, rgba(46, 24, 54, 0.5) 5%, transparent 5%, transparent 10%);
 }
 
 .hero-text {
@@ -224,19 +225,25 @@ form button {
     height: 8rem;
     margin-left: 2rem;
     padding-top: .625rem;
+    color: var(--color5)
+}
+
+.subsection,
+.subsection-alt {
+    display: flex;
+    padding: 8%;
+    margin: 10rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 20px var(--uiColorShadow);
 }
 
 .subsection {
-    display: flex;
     justify-content: space-around;
-    padding: 8%;
 }
 
 .subsection-alt {
-    display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 8%;
 }
 
 .subsection-alt h2 {
