@@ -1,5 +1,3 @@
-<!--38:44git -->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +10,7 @@
     <link rel="stylesheet" href="src/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/459fc8d5be.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
 
@@ -20,94 +19,113 @@
 <body>
     <section class="hero">
         <nav>
-            <img class='logo' src="src/images/logo-placeholder.png" alt="LOGO">
-            <ul>
-                <li>About me</li>
-                <li>My projects</li>
-                <li>Contact me</li>
+            <img class="logo" src="src/images/logo_ph.png" alt="Logo" />
+            <ul id="navList">
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#my-projects">My projects</a></li>
+                <li><a href="#contact-info">Contact me</a></li>
             </ul>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
         <div class="content">
             <div class="hero-text">
-                <h1>Noah Winters</h1>
+                <h1 class="my_name">Noah Winters</h1>
                 <p>Full Stack Developer</p>
-                <div class="button">About me</div>
-            </div>
-            <div class="socials">
-                <div href="" class="social">
-                    <svg fill="#FFFFFF" width="50px" height="50px" viewBox=" 0 0 64 64"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <title></title>
-                            <path
-                                d="M44,7H20A13,13,0,0,0,7,20V44A13,13,0,0,0,20,57H44A13,13,0,0,0,57,44V20A13,13,0,0,0,44,7ZM55,44A11,11,0,0,1,44,55H20A11,11,0,0,1,9,44V20A11,11,0,0,1,20,9H44A11,11,0,0,1,55,20Z">
-                            </path>
-                            <path
-                                d="M22,25H15a1,1,0,0,0-1,1V49a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V26A1,1,0,0,0,22,25ZM21,48H16V27h5Z">
-                            </path>
-                            <path
-                                d="M42,25h0a14.18,14.18,0,0,0-7,2.11V26a1,1,0,0,0-1-1H27a1,1,0,0,0-1,1V49a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V33.81A7.66,7.66,0,0,1,38,33c2.81,0,3,2,3,2.44V49a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V33.17a8.3,8.3,0,0,0-2.14-6.11A7.93,7.93,0,0,0,42,25Zm6,23H43V35.44C43,33.9,42,31,38,31a10.24,10.24,0,0,0-4.45,1.29,1,1,0,0,0-.55.89V48H28V27h5v2.06a1,1,0,0,0,1.66.75A12.31,12.31,0,0,1,42,27h0a6,6,0,0,1,4.42,1.47A6.41,6.41,0,0,1,48,33.17Z">
-                            </path>
-                            <path
-                                d="M18.5,14A4.5,4.5,0,1,0,23,18.5,4.5,4.5,0,0,0,18.5,14Zm0,7A2.5,2.5,0,1,1,21,18.5,2.5,2.5,0,0,1,18.5,21Z">
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-                <div href="https://github.com/NoahAWinters" class="social">
-                    <svg fill="none" width="50px" height="50px" viewBox="-2 -2 24 24" xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="xMinYMin" class="jam jam-github" stroke="#FFFFFF">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M18.88 1.099C18.147.366 17.265 0 16.233 0H3.746C2.714 0 1.832.366 1.099 1.099.366 1.832 0 2.714 0 3.746v12.487c0 1.032.366 1.914 1.099 2.647.733.733 1.615 1.099 2.647 1.099H6.66c.19 0 .333-.007.429-.02a.504.504 0 0 0 .286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555 0 0 1-.904-.091 2.026 2.026 0 0 1-.872-.39 1.651 1.651 0 0 1-.572-.8l-.13-.3a3.25 3.25 0 0 0-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956 0 0 1-.17-.156.723.723 0 0 1-.117-.182c-.026-.061-.004-.111.065-.15.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1 0 0 1 .631.677c.2.355.44.626.722.813.282.186.566.28.852.28.286 0 .533-.022.742-.065a2.59 2.59 0 0 0 .585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907 0 0 1-1.333-.234 5.314 5.314 0 0 1-1.223-.507 3.5 3.5 0 0 1-1.047-.872c-.277-.347-.505-.802-.683-1.365-.177-.564-.266-1.215-.266-1.952 0-1.049.342-1.942 1.027-2.68-.32-.788-.29-1.673.091-2.652.252-.079.625-.02 1.119.175.494.195.856.362 1.086.5.23.14.414.257.553.352a9.233 9.233 0 0 1 2.497-.338c.859 0 1.691.113 2.498.338l.494-.312a6.997 6.997 0 0 1 1.197-.572c.46-.174.81-.221 1.054-.143.39.98.424 1.864.103 2.653.685.737 1.028 1.63 1.028 2.68 0 .737-.089 1.39-.267 1.957-.177.568-.407 1.023-.689 1.366-.282.343-.633.63-1.053.865-.42.234-.828.403-1.223.507a8.9 8.9 0 0 1-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36 0 0 0 .208.189c.096.034.18.056.254.064.074.01.18.013.318.013h2.914c1.032 0 1.914-.366 2.647-1.099.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z">
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-                <div href="" class="social">
-                    <svg fill="#FFFFFF" height="50px" width="50px" version="1.1" id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        viewBox="0 0 512 512" xml:space="preserve">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <g transform="translate(1 1)">
-                                <g>
-                                    <g>
-                                        <path
-                                            d="M365.08-1H144.92C64.707-1-1,64.707-1,144.92v220.16C-1,445.293,64.707,511,144.92,511h220.16 C445.293,511,511,445.293,511,365.08V144.92C511,64.707,445.293-1,365.08-1z M493.933,365.08 c0,70.827-58.027,128.853-128.853,128.853H144.92c-70.827,0-128.853-58.027-128.853-128.853V144.92 c0-70.827,58.027-128.853,128.853-128.853h220.16c70.827,0,128.853,58.027,128.853,128.853V365.08z">
-                                        </path>
-                                        <path
-                                            d="M365.08,50.2H144.92c-52.053,0-94.72,42.667-94.72,94.72v220.16c0,52.053,42.667,94.72,94.72,94.72h220.16 c52.053,0,94.72-42.667,94.72-94.72V144.92C459.8,92.867,417.133,50.2,365.08,50.2z M442.733,365.08 c0,42.667-34.987,77.653-77.653,77.653H144.92c-42.667,0-77.653-34.987-77.653-77.653V144.92 c0-42.667,34.987-77.653,77.653-77.653h220.16c42.667,0,77.653,34.987,77.653,77.653V365.08z">
-                                        </path>
-                                        <path
-                                            d="M255,118.467c-75.093,0-136.533,61.44-136.533,136.533S179.907,391.533,255,391.533S391.533,330.093,391.533,255 S330.093,118.467,255,118.467z M255,374.467c-65.707,0-119.467-53.76-119.467-119.467S189.293,135.533,255,135.533 S374.467,189.293,374.467,255S320.707,374.467,255,374.467z">
-                                        </path>
-                                        <path
-                                            d="M255,161.133c-52.053,0-93.867,41.813-93.867,93.867c0,52.053,41.813,93.867,93.867,93.867s93.867-41.813,93.867-93.867 S307.053,161.133,255,161.133z M255,331.8c-42.667,0-76.8-34.133-76.8-76.8c0-42.667,34.133-76.8,76.8-76.8 c42.667,0,76.8,34.133,76.8,76.8C331.8,297.667,297.667,331.8,255,331.8z">
-                                        </path>
-                                        <path
-                                            d="M391.533,92.867c-14.507,0-25.6,11.093-25.6,25.6s11.093,25.6,25.6,25.6c14.507,0,25.6-11.093,25.6-25.6 S406.04,92.867,391.533,92.867z">
-                                        </path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
+                <!-- <div class="button"><a href="#about-me">About Me</a></div> -->
+                <button><a href="#about-me">About Me</a></button>
             </div>
         </div>
 
     </section>
-    <section></section>
-    <section></section>
-    <footer></footer>
+    <section class="subsection" id="about-me">
+        <div class="information">
+            <h2>About Me</h2>
+            <p>Insert about me text here. Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived
+                not only five
+                centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="headshot-container">
+            <img class="headshot" src="src/images/VideoGameDunkeyProfileLogo.jpeg" alt="myFace" />
+        </div>
+    </section>
+    <section class="subsection-alt" id="my-projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img class="project-image" src="src/images/platformer_ph.jpg" alt="3D-Platformer">
+                <h3>3D-Platformer</h3>
+                <p class="project-description">3D-Platformer ive been working on since the winter of 2021. A
+                    passion
+                    project thats a throwback to the 3d platforming games of the PS2 era</p>
+                <hr />
+                <p><a class="project-link" href=" https://github.com/NoahAWinters/Platformer">View
+                        here!</a></p>
+            </div>
+            <div class="project-card">
+                <img class="project-image" src="src/images/Picture1.png" alt="Website">
+                <h3>This Website</h3>
+                <p class="project-description">This has been my main project outside of my untitled Platformer. I wanted
+                    a place to share my code and share projects easier. I will continue to update this site as I grow
+                    with more
+                    personal projects</p>
+                <hr />
+                <p><a class="project-link" href=" https://www.noahwinters.com">View
+                        here!</a></p>
+            </div>
 
-
+        </div>
+        </div>
+    </section>
+    <footer id="contact-info">
+        <h2>Contact Me</h2>
+        <p>
+            <!-- noah@noahwinters.com<br>(518)444-2099 -->
+        </p>
+        <div class="contact-form">
+            <form action="https://formsubmit.co/noah@noahwinters.com" method="POST">
+                <h3>Want to get in touch?</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Phone Number">
+                <textarea id="" message" rows="4" placeholder="Message"></textarea>
+                <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
+                <input type="hidden" name="_subject" value="Thank you for reaching out">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="socials">
+            <div>
+                <a href="https://github.com/NoahAWinters" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill='#01161E' width="50" height="50" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <a href="http://www.w3.org" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill='#01161E' width="50" height="50" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/noah-winters-72452b174/" class="social">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill='#01161E' width="50" height="50" viewBox="0 0 24 24">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="src/app.js"></script>
 </body>
 
