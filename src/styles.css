@@ -167,7 +167,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-    color: #01161E;
+    color: var(--color4);
 }
 
 form {
@@ -345,6 +345,11 @@ img {
 .project-card:hover {
     background-color: var(--color5);
     padding: .7rem;
+    box-shadow: 20px, 20px, 20px, red;
+}
+
+.project-card hr {
+    color: var(--color0);
 }
 
 .project-description {
