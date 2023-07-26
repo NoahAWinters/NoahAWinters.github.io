@@ -278,6 +278,8 @@ form button {
 }
 
 .subsection-alt h2 {
+    margin-top: -1rem;
+    margin-bottom: 5rem;
     color: var(--color4);
 }
 
@@ -301,16 +303,18 @@ form button {
 .projects {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .project-card {
     position: relative;
-    width: 26rem;
+    width: 21rem;
     height: 26rem;
     border-radius: 1.5rem;
     background-color: var(--color4);
     box-shadow: 5px 5px 20px var(--uiColorShadow);
-    margin: 30px;
+    margin-left: 1rem;
+    margin-top: 4rem;
     transition: .5s;
 }
 
