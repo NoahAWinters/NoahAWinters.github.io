@@ -279,6 +279,7 @@ img {
 .subsection-alt {
     flex-direction: column;
     text-align: center;
+    min-height: 100vh;
 }
 
 .subsection-alt h2 {
