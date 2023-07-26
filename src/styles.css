@@ -273,6 +273,7 @@ img {
 
 .subsection {
     justify-content: space-around;
+    min-height: 65vh;
     flex-wrap: wrap;
 }
 
@@ -408,10 +409,11 @@ img {
     }
 
     .my-information {
+
         max-width: 45vw;
         margin-right: 0;
         margin-left: 0;
-        padding: 0;
+        padding: .5rem;
     }
 
     .hero-text {
