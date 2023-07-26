@@ -42,7 +42,7 @@ body {
 button {
     width: fit-content;
     height: fit-content;
-    background-color: var(--color2);
+    background-color: var(--colorX);
     color: var(--color5);
     text-align: center;
     border-radius: .75rem;
