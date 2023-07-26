@@ -329,6 +329,9 @@ form button {
     display: flex;
     align-items: center;
     justify-content: center;
+    /*for testing*/
+    background-color: red;
+
 }
 
 
