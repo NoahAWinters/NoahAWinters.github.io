@@ -261,7 +261,6 @@ img {
 .subsection,
 .subsection-alt {
     display: flex;
-
     padding-bottom: 4%;
     margin: 4rem;
     max-height: fit-content;
@@ -283,7 +282,7 @@ img {
     min-height: 100vh;
 }
 
-.subsection-alt h2 {
+.alt-color-h2 {
     margin-bottom: 6rem;
     color: var(--color4);
 }
