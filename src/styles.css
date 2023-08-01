@@ -365,7 +365,7 @@ img {
 .skill-card:hover {
     background-color: var(--color5);
     padding: .7rem;
-    box-shadow: 5px 5px 20px yellow;
+    box-shadow: 5px 5px 20px aqua;
 }
 
 .project-card hr {
