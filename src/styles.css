@@ -23,7 +23,7 @@ html {
     --_g: 35.36% 35.36% at;
     --_c: #0000 66%, var(--color3) 68% 70%, #0000 72%;
     background:
-        linear-gradient(45deg, var(--color0) 4%, transparent),
+        linear-gradient(45deg, var(--color0) 1rem, transparent),
         radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
         radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
         radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
@@ -365,7 +365,7 @@ img {
 .skill-card:hover {
     background-color: var(--color5);
     padding: .7rem;
-    box-shadow: 5px 5px 10px aqua;
+    box-shadow: 5px 5px 10px blueviolet;
     transition: .25s;
 }
 
