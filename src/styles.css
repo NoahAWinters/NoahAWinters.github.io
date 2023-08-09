@@ -1,11 +1,15 @@
+/*=======================Main===========================*/
+
 :root {
 
-    --color0: #01161E;
-    --color1: rgb(36, 18, 78);
-    --color2: rgb(46, 24, 54);
-    --color3: green;
-    --color4: #EFF6E0;
-    --color5: #FDFEFF;
+    --richBlack: #01161E;
+    --offWhite: #F2F2F2;
+    --main: rgb(36, 18, 78);
+    --accent: rgb(46, 24, 54);
+    --accent2: rgb(87, 17, 112);
+    --section: #35344d;
+    --card: #CEE2C4;
+    --cardHover: #7db17d;
 
     --uiColorConfirm: lightgreen;
     --uiColorForbidden: red;
@@ -14,6 +18,20 @@
 
 html {
     scroll-behavior: smooth;
+    --s: 50px;
+    --c: var(--main);
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: 35.36% 35.36% at;
+    --_c: #0000 66%, var(--accent2) 68% 70%, #0000 72%;
+    background:
+        linear-gradient(140deg, var(--richBlack) 20%, transparent),
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
+        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
+        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
+        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
+        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
+    background-attachment: fixed;
 }
 
 body {
@@ -21,39 +39,36 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #598392;
+    justify-content: center;
 }
 
 button {
     width: fit-content;
     height: fit-content;
-    background-color: var(--color2);
-    color: var(--color5);
+    /* background-color: var(--section); */
+    background-color: var(--cardHover);
+    color: var(--offWhite);
     text-align: center;
     border-radius: .75rem;
     margin-top: 2.25rem;
     font-size: 1.875rem;
-    font-weight: 400;
+    font-weight: 600;
     border: none;
 }
 
 button:hover {
-    background-color: var(--color3);
+    /* background-color: var(--accent2); */
+    background-color: #56A156;
     cursor: pointer;
-    color: var(--color5);
+    color: var(--offWhite);
 }
 
-button:active {
-    background-color: var(--uiColorConfirm);
-    color: var(--color5);
-
-}
 
 button a,
 button a:hover,
 button a:active {
     text-decoration: none;
-    color: var(--color5);
+    color: var(--offWhite);
     display: block;
     padding: 1rem;
 }
@@ -61,26 +76,43 @@ button a:active {
 
 
 section {
-    background-color: var(--color1);
+    background-color: var(--section);
 }
 
 footer {
     height: 60%;
-    background-color: var(--color3);
+    background-color: var(--section);
+
+    color: var(--offWhite);
+    padding: 3%;
+    text-align: center;
 }
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 }
+
+nav a {
+    font-size: calc(8px + 1.5vw);
+    position: relative;
+    padding-right: 2vw;
+}
+
 
 a {
     text-decoration: none;
-    color: var(--color5);
+    color: var(--offWhite);
+    font-size: 1rem;
+    width: fit-content;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 a:hover {
-    color: var(--color4);
+    color: var(--card);
 }
 
 a:active {
@@ -114,15 +146,15 @@ h1 {
 }
 
 h2 {
+
     font-size: 2.813rem;
     line-height: 1.3;
     letter-spacing: -.031rem;
-
-
 }
 
+
 p {
-    font-size: 1.25rem;
+    font-size: calc(.75rem + 1.1vw);
     text-size-adjust: auto;
     font-weight: 400;
     margin: 0;
@@ -136,13 +168,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-    color: #01161E;
-}
-
-footer {
-    color: var(--color0);
-    padding: 3%;
-    text-align: center;
+    color: var(--card);
 }
 
 form {
@@ -151,26 +177,28 @@ form {
     padding: 2vw 4vw;
     width: 90%;
     max-width: 600px;
-    background-color: var(--color4);
+    background-color: var(--card);
     box-shadow: 5px 5px 20px var(--uiColorShadow);
     border-radius: 1rem;
+
 }
 
 form h3 {
-    color: var(--color0);
-    font-size: 3rem;
+    color: var(--richBlack);
+    font-size: 1vw;
     font-weight: 800;
 }
 
 form input,
 form textarea {
-    color: var(--color0);
+    color: var(--richBlack);
     font-size: 1rem;
     border: 0;
     margin: .625rem 0;
     padding: 1.25rem;
-    outline: none;
-    background-color: var(--color5);
+    outline: double;
+    outline-color: var(--accent);
+    background-color: var(--offWhite);
     resize: none;
 }
 
@@ -184,38 +212,46 @@ form button {
     max-width: 600px;
 }
 
+img {
+    max-width: 100%;
+}
 
 
+/*=======================Hero===========================*/
 
 .hero {
-    color: var(--color5);
+    color: var(--offWhite);
     font-size: 2.5rem;
     height: 100vh;
 
-    /*Plaid*/
-    /* background: linear-gradient(45deg, rgb(36, 18, 78), transparent), repeating-linear-gradient(45deg, rgb(46, 24, 54) 0%, rgb(46, 24, 54) 5%, transparent 5%, transparent 10%, rgb(36, 18, 78) 10%, rgb(36, 18, 78) 11%, transparent 11%, transparent 12%), green repeating-linear-gradient(-45deg, rgba(46, 24, 54, 0.5) 0%, rgba(46, 24, 54, 0.5) 5%, transparent 5%, transparent 10%); */
     --s: 50px;
-    --c: var(--color1);
+    --c: var(--main);
     --_s: calc(2*var(--s)) calc(2*var(--s));
     --_g: 35.36% 35.36% at;
-    --_c: #0000 66%, green 68% 70%, #0000 72%;
-    background:
-        linear-gradient(-45deg, black 50%, transparent),
-        radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
-        radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
-        radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
-        radial-gradient(var(--_g) 0 75%, var(--_c)) 0 0/var(--_s),
-        repeating-conic-gradient(var(--c) 0 25%, #0000 0 50%) 0 0/var(--_s),
-        radial-gradient(var(--_c)) 0 calc(var(--s)/2)/var(--s) var(--s) var(--c);
-    /* background-attachment: fixed; */
+    --_c: #0000 66%, var(--accent2) 68% 70%, #0000 72%;
+    background-color: transparent;
 
 }
 
 .hero-text {
     margin-left: 5%;
     cursor: default;
-
 }
+
+
+.hamburger {
+    display: none;
+}
+
+.hamburger:hover {
+    color: var(--accent2);
+    background-color: transparent;
+}
+
+.hamburger:active {
+    color: var(--card);
+}
+
 
 .content {
     display: flex;
@@ -224,88 +260,138 @@ form button {
     align-items: flex-start;
 }
 
-.socials {
-    padding-bottom: 5rem;
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-}
-
-.social {
-    margin: 2rem;
-}
-
 .logo {
     height: 8rem;
     margin-left: 2rem;
-    padding-top: .625rem;
-    color: var(--color5)
+    color: var(--offWhite)
 }
 
+
+
+
+/*=======================Content===========================*/
 .subsection,
 .subsection-alt {
     display: flex;
-    padding: 8%;
-    margin: 3rem;
+    padding-bottom: 4%;
+    margin: 4rem;
+    max-height: fit-content;
     border-radius: 2rem;
     box-shadow: 5px 5px 20px var(--uiColorShadow);
+    align-items: center;
 }
 
 .subsection {
     justify-content: space-around;
+    min-height: 65vh;
+    flex-wrap: wrap;
 }
 
 .subsection-alt {
+    justify-content: center;
     flex-direction: column;
     text-align: center;
+    min-height: 100vh;
 }
 
-.subsection-alt h2 {
-    color: var(--color4);
+.alt-color-h2 {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    color: var(--card);
 }
 
-.information {
-    font-size: 1.25rem;
-    color: var(--color4);
-    max-width: 60rem;
+.my-information {
+    color: var(--card);
+    margin-left: auto;
+    max-width: 50vw;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+.my-information p {
+    font-size: 1.1rem;
 }
 
 .headshot {
+    margin: 1rem;
     width: 20rem;
     height: 20rem;
     border-radius: 1rem;
+    margin: 3vw;
+
 }
 
 .headshot-container {
     display: flex;
     align-items: center;
+    padding-top: 2rem;
 }
 
-.projects {
+
+/*=======================Card===========================*/
+
+.projects,
+.skills {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 3%;
+}
+
+.project-card,
+.skill-card {
+    position: relative;
+    padding: .5rem;
+    border-radius: 1.5rem;
+    /* background-color: #7db17d; */
+    background-color: var(--card);
+    box-shadow: 5px 5px 20px var(--uiColorShadow);
 }
 
 .project-card {
-    position: relative;
-    width: 26rem;
+
+    width: 23rem;
     height: 26rem;
-    border-radius: 1.5rem;
-    background-color: var(--color4);
-    box-shadow: 5px 5px 20px var(--uiColorShadow);
-    margin: 30px;
+    /* padding: .5rem; */
+    /* border-radius: 1.5rem; */
+    /* background-color: var(--card); */
+
+    /* box-shadow: 5px 5px 20px var(--uiColorShadow); */
+    margin: 1rem;
+    margin-top: 2rem;
+    transition: .5s;
+}
+
+.skill-card {
+    /* position: relative; */
+    width: fit-content;
+    height: fit-content;
+
+    margin: 1rem;
+    margin-top: 4rem;
     transition: .5s;
 }
 
 .project-card a {
     text-decoration: none;
-    color: var(--color2);
+    color: var(--accent);
     margin-top: 30px;
 }
 
-.project-card:hover {
-    background-color: var(--color3);
-    width: 27rem;
+.project-card:hover,
+.skill-card:hover {
+    /* background-color: var(--offWhite); */
+    /* background-color: #469046; */
+    background-color: #7db17d;
+    padding: .7rem;
+    box-shadow: 5px 5px 10px black;
+    transition: .25s;
+}
+
+.project-card hr {
+    color: var(--richBlack);
 }
 
 .project-description {
@@ -328,18 +414,43 @@ form button {
 }
 
 
-.hamburger {
-    display: none;
+
+
+
+
+.skill-card h3 {
+    font-size: 1.25vw;
+    font-weight: 300px;
+    margin: 2%;
 }
 
-.hamburger:hover {
-    color: var(--color3);
-    background-color: transparent;
+.skill-card svg {
+    width: 15vw;
+    height: 20vh;
+    padding: .25rem;
 }
 
-.hamburger:active {
-    color: var(--color4);
+.skill-card hr {
+    color: var(--richBlack);
+    margin-bottom: 1rem;
 }
+
+
+
+
+/*=======================Footer===========================*/
+
+.socials {
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.social {
+    margin: 2rem;
+}
+
 
 .contact-form {
     width: 100%;
@@ -354,13 +465,17 @@ form button {
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1400px) {
+
+    .alt-color-h2 {
+        margin-bottom: 3rem;
+        color: var(--card);
+    }
+
     .projects {
         display: flex;
         flex-wrap: wrap;
-        gap: 2%;
     }
-
 
     .project-description {
         font-size: .8rem;
@@ -368,11 +483,15 @@ form button {
         width: 15rem;
     }
 
-    .hero-text {
+    .my-information {
+        max-width: 45vw;
+        margin-right: 0;
+        margin-left: 0;
+        padding: .5rem;
+    }
 
+    .hero-text {
         margin-bottom: 80%;
-        padding-top: 10rem;
-        margin-top: 20%;
         margin-left: 5%;
         cursor: default;
         display: block;
@@ -382,16 +501,16 @@ form button {
         display: block;
         border: 0;
         background-color: transparent;
-        color: var(--color5);
+        color: var(--offWhite);
         font-size: 30px;
-        margin: 20px;
+        margin-right: 2rem;
         align-self: flex-end;
     }
 
     ul {
         display: none;
         background-color: var(--uiColorshadow);
-        margin: 0px;
+
         padding-bottom: 20px;
     }
 
@@ -401,7 +520,6 @@ form button {
         width: 40%;
         justify-content: space-around;
         font-size: 30px;
-        padding-right: 50px;
     }
 
     nav {
@@ -409,14 +527,65 @@ form button {
         flex-direction: column-reverse;
         align-items: flex-start;
         background-color: var(--uiColorshadow);
+        margin-bottom: 5rem;
+    }
+
+    nav a {
+        font-size: 2rem;
+        /* margin-top: -5; */
     }
 
     .logo {
         display: none;
     }
 
+    .headshot {
+        margin: 1rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .skill-card svg {
+        width: 30vw;
+        padding: 0rem;
+    }
+
+    .skill-card h3 {
+        font-size: 2vw;
+        font-weight: 200px;
+        margin: 2%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    p {
+
+        font-weight: 200;
+    }
+
+    h2 {
+        margin-top: 12%;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    .skill-card h3 {
+        font-size: 3vw;
+        font-weight: 200px;
+        margin: 2%;
+    }
+
+    .skill-card svg {
+        width: 50vw;
+
+    }
+
+    .project-card {
+        width: fit-content;
+        margin-bottom: 4rem;
+    }
+
     .headshot-container {
         display: none;
-
     }
 }
