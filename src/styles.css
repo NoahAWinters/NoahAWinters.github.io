@@ -421,6 +421,7 @@ img {
 }
 
 .skill-card hr {
+    align-items: center;
     color: var(--color0);
     margin-bottom: 1rem;
 }
