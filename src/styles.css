@@ -237,6 +237,7 @@ img {
 }
 
 .nav:hover {
+    border: .02rem solid var(--offWhite);
     background-color: #56A15650;
     transition: .5s;
 }
@@ -624,6 +625,7 @@ img {
 
     .stayGreen {
         background-color: #56A15650;
+        border: .02rem solid var(--offWhite);
     }
 
     .logo {
