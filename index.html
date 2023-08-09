@@ -18,17 +18,22 @@
 
 <body>
     <section class="hero">
-        <nav>
+        <div class="nav" id="navbar">
             <img class="logo" src="src/images/logo_ph.png" alt="Logo" />
-            <ul id="navList">
-                <li><a href="#about-me">About me</a></li>
-                <li><a href="#my-projects">My projects</a></li>
-                <li><a href="#contact-info">Contact me</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
+
+            <button id="hamburger" class="hamburger">
+                <span class="burger"></span>
+                <span class="burger-text">Menu</span>
             </button>
-        </nav>
+
+            <nav>
+                <ul id="navList">
+                    <li><a href="#about-me">About me</a></li>
+                    <li><a href="#my-projects">My projects</a></li>
+                    <li><a href="#contact-info">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="content">
             <div class="hero-text">
                 <h1 class="my_name">Noah Winters</h1>
