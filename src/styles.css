@@ -1,8 +1,6 @@
 /*=======================Main===========================*/
 
 :root {
-
-    --richBlack: #01161E;
     --offWhite: #F2F2F2;
     --main: rgb(36, 18, 78);
     --accent: rgb(46, 24, 54);
@@ -14,7 +12,7 @@
 
     --uiColorConfirm: lightgreen;
     --uiColorForbidden: red;
-    --uiColorShadow: #081E26;
+
 }
 
 html {
@@ -25,7 +23,7 @@ html {
     --_g: 35.36% 35.36% at;
     --_c: #0000 66%, var(--accent2) 68% 70%, #0000 72%;
     background:
-        linear-gradient(140deg, var(--richBlack) 10%, transparent),
+        linear-gradient(140deg, var(--accent) 1%, transparent),
         radial-gradient(var(--_g) 100% 25%, var(--_c)) var(--s) var(--s)/var(--_s),
         radial-gradient(var(--_g) 0 75%, var(--_c)) var(--s) var(--s)/var(--_s),
         radial-gradient(var(--_g) 100% 25%, var(--_c)) 0 0/var(--_s),
@@ -48,26 +46,35 @@ button {
     height: fit-content;
     /* background-color: var(--section); */
     background-color: var(--transparentGreen);
+    border: 2px solid var(--transparentGreen);
     color: var(--offWhite);
     text-align: center;
     border-radius: .75rem;
     margin-top: 2.25rem;
     font-size: 1.875rem;
     font-weight: 600;
-    border: none;
-    transition: .75s;
+    transition: .5s;
     z-index: 237;
 }
 
-button:hover {
+button:hover,
+.social:hover {
     /* background-color: var(--accent2); */
-    box-shadow: 5px 5px 10px black;
+
+    box-shadow: 5px 5px black;
+    border: 2px solid black;
     background-color: var(--cardHover);
     cursor: pointer;
     color: var(--offWhite);
     transition: .5s;
+    transform: translate(-3px, -3px);
 }
 
+button:active,
+.social:active {
+    box-shadow: 0px 0px black;
+    transform: translate(3px, 3px);
+}
 
 button a,
 button a:hover,
@@ -86,9 +93,9 @@ section {
 
 footer {
     height: 60%;
-    width: 100vw;
     background-color: var(--section);
-
+    border-top: .25rem solid black;
+    border-bottom: .25rem solid black;
     color: var(--offWhite);
     padding: 3%;
     text-align: center;
@@ -172,11 +179,14 @@ hr {
     margin: 1%;
     margin-left: 5%;
     margin-right: 5%;
-
+    height: .25rem;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
-    color: var(--card);
+    border: none;
+    border-radius: 1rem;
+    background-color: black;
+
 }
 
 form {
@@ -186,20 +196,22 @@ form {
     width: 90%;
     max-width: 600px;
     background-color: var(--card);
-    box-shadow: 5px 5px 20px var(--uiColorShadow);
+    /* box-shadow: 5px 5px 20px black; */
     border-radius: 1rem;
+    border: 3px solid black;
+    box-shadow: 5px 5px black;
 
 }
 
 form h3 {
-    color: var(--richBlack);
+    color: black;
     font-size: 1vw;
     font-weight: 800;
 }
 
 form input,
 form textarea {
-    color: var(--richBlack);
+    color: black;
     font-size: 1rem;
     border: 0;
     margin: .625rem 0;
@@ -238,7 +250,7 @@ img {
 }
 
 .nav:hover {
-    border: .1rem solid var(--offWhite);
+    border: .02rem solid var(--offWhite);
     background-color: #56A156;
     transition: .5s;
 }
@@ -360,14 +372,16 @@ img {
     margin: 4rem;
     max-height: fit-content;
     border-radius: 2rem;
+    border: 2px solid black;
+    box-shadow: 5px 5px black;
     align-items: center;
+    gap: 20px;
 }
 
 .subsection {
     justify-content: space-around;
     min-height: 65vh;
     flex-wrap: wrap;
-    box-shadow: 5px 5px 20px yellow;
 }
 
 .subsection-alt {
@@ -375,7 +389,6 @@ img {
     flex-direction: column;
     text-align: center;
     min-height: 100vh;
-    box-shadow: 5px 5px 20px blue;
 }
 
 .alt-color-h2 {
@@ -431,18 +444,15 @@ img {
     border-radius: 1.5rem;
     /* background-color: #7db17d; */
     background-color: var(--card);
-    box-shadow: 5px 5px 20px var(--uiColorShadow);
+    /* box-shadow: 5px 5px 20px black; */
+    border: .15rem solid var(--cardHover);
+    /* box-shadow: 5px 5px var(--uiColorShadow); */
 }
 
 .project-card {
 
     width: 23rem;
     height: 26rem;
-    /* padding: .5rem; */
-    /* border-radius: 1.5rem; */
-    /* background-color: var(--card); */
-
-    /* box-shadow: 5px 5px 20px var(--uiColorShadow); */
     margin: 1rem;
     margin-top: 2rem;
     transition: .5s;
@@ -466,17 +476,13 @@ img {
 
 .project-card:hover,
 .skill-card:hover {
-    /* background-color: var(--offWhite); */
-    /* background-color: #469046; */
     background-color: #7db17d;
-    padding: .7rem;
-    box-shadow: 5px 5px 10px black;
+    border: .15rem solid black;
+    box-shadow: 5px 5px black;
     transition: .25s;
+    transform: translate(-3px, -3px);
 }
 
-.project-card hr {
-    color: var(--richBlack);
-}
 
 .project-description {
     font-size: 1rem;
@@ -493,7 +499,7 @@ img {
     max-height: 200px;
     border-radius: .625rem;
     margin-top: -60px;
-    box-shadow: 5px 5px 20px var(--uiColorshadow);
+    box-shadow: 5px 5px 20px black;
     overflow: hidden;
 }
 
@@ -515,7 +521,7 @@ img {
 }
 
 .skill-card hr {
-    color: var(--color0);
+    color: black;
     margin-bottom: 1rem;
 }
 
@@ -532,9 +538,20 @@ img {
 }
 
 .social {
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    border: 2px solid var(--transparentGreen);
+    background-color: var(--transparentGreen);
+    transition: .5s;
+    color: var(--font-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 2rem;
 }
-
 
 .contact-form {
     width: 100%;
@@ -545,7 +562,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 
@@ -595,7 +611,7 @@ img {
 
     ul {
         display: none;
-        background-color: var(--uiColorshadow);
+        background-color: black;
 
         padding-bottom: 20px;
     }
@@ -614,7 +630,7 @@ img {
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
-        background-color: var(--uiColorshadow);
+        background-color: black;
         /* margin-bottom: 1rem; */
         transition: .75s;
     }
