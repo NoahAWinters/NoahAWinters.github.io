@@ -86,6 +86,7 @@ section {
 
 footer {
     height: 60%;
+    width: 100vw;
     background-color: var(--section);
 
     color: var(--offWhite);
@@ -237,8 +238,8 @@ img {
 }
 
 .nav:hover {
-    border: .02rem solid var(--offWhite);
-    background-color: #56A15650;
+    border: .1rem solid var(--offWhite);
+    background-color: #56A156;
     transition: .5s;
 }
 
@@ -359,7 +360,6 @@ img {
     margin: 4rem;
     max-height: fit-content;
     border-radius: 2rem;
-    box-shadow: 5px 5px 20px var(--uiColorShadow);
     align-items: center;
 }
 
@@ -367,6 +367,7 @@ img {
     justify-content: space-around;
     min-height: 65vh;
     flex-wrap: wrap;
+    box-shadow: 5px 5px 20px yellow;
 }
 
 .subsection-alt {
@@ -374,6 +375,7 @@ img {
     flex-direction: column;
     text-align: center;
     min-height: 100vh;
+    box-shadow: 5px 5px 20px blue;
 }
 
 .alt-color-h2 {
