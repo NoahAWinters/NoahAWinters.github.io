@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Noah A. Winters</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/459fc8d5be.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,9 +29,15 @@
 
             <nav>
                 <ul id="navList">
-                    <li><a href="#about-me">About me</a></li>
-                    <li><a href="#my-projects">My projects</a></li>
-                    <li><a href="#contact-info">Contact me</a></li>
+                    <li>
+                        <button class="header-link"><a href="#about-me">About me</a></button>
+                    </li>
+                    <li>
+                        <button class="header-link"><a href="#my-projects">My projects</a></button>
+                    </li>
+                    <li>
+                        <button class="header-link"><a href="#contact-info">Contact me</a></button>
+                    </li>
                 </ul>
             </nav>
 
@@ -198,7 +205,7 @@
     <hr />
 
     <section class="subsection-alt" id="my-projects">
-        <h2 h2 class="alt-color-h2">Projects</h2>
+        <h2 h2 class="alt-color-h2">Top Projects</h2>
         <div class="projects">
             <div class="project-card">
                 <img class="project-image" src="src/images/platformer_ph.jpg" alt="3D-Platformer">
@@ -225,7 +232,9 @@
             <div class="project-card">
                 <h3>Coming soon...</h3>
             </div>
+
         </div>
+        <button>See More</button>
     </section>
 
     <section id="contact-info">
