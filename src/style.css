@@ -11,6 +11,9 @@
     --cardHover: #7db17d;
     --transparentGreen: #56A15650;
 
+    --logo-transition: .25s;
+    --button-transition: .5s;
+
     --uiColorConfirm: lightgreen;
     --uiColorForbidden: red;
 }
@@ -41,7 +44,7 @@ body {
 }
 
 main {
-    margin-left: 5rem;
+    margin-left: 8rem;
 }
 
 img {
@@ -55,7 +58,7 @@ img {
     border-radius: 100%;
     border: 2px solid var(--transparentGreen);
     background-color: var(--transparentGreen);
-    transition: .5s;
+    transition: var(--button-transition);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,14 +75,15 @@ button {
     margin-top: 2.25rem;
     font-size: 1.875rem;
     font-weight: 600;
-    transition: .5s;
+    transition: var(--button-transition);
     z-index: 237;
+}
 
-    a {
-        font-family: 'Roboto', sans-serif;
-        display: block;
-        padding: 1rem;
-    }
+button a {
+
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    padding: 1rem;
 }
 
 .header-link {
@@ -89,10 +93,12 @@ button {
     margin: 0;
     padding: 1;
 
-    a {
-        margin: 0;
-        padding: 0;
-    }
+
+}
+
+.header-link a {
+    margin: 0;
+    padding: 0;
 }
 
 button:hover,
@@ -102,7 +108,7 @@ button:hover,
     background-color: var(--cardHover);
     cursor: pointer;
     color: var(--offWhite);
-    transition: .5s;
+    /* transition: .5s; */
     transform: translate(-3px, -3px);
 }
 
@@ -117,14 +123,12 @@ section {
 }
 
 footer {
-    height: 60%;
+
     background-color: var(--section);
     border-top: .25rem solid black;
     border-bottom: .25rem solid black;
     color: var(--offWhite);
-    padding: 3%;
     text-align: center;
-    z-index: 237;
 }
 
 a {
@@ -208,70 +212,36 @@ form {
     border-radius: 1rem;
     border: 3px solid black;
     box-shadow: 5px 5px black;
-
-    h3 {
-        color: black;
-        font-size: 1vw;
-        font-weight: 800;
-    }
-
-    input,
-    textarea {
-        color: black;
-        font-size: 1rem;
-        border: 0;
-        margin: .625rem 0;
-        padding: 1.25rem;
-        outline: double;
-        outline-color: var(--accent);
-        background-color: var(--offWhite);
-        resize: none;
-    }
-
-    button {
-        border-radius: .625rem;
-        margin-top: 1rem;
-        padding-left: auto;
-        padding-right: auto;
-        width: 100%;
-        font-size: 2rem;
-        max-width: 600px;
-    }
 }
 
-
-
-
-
-/*=======================Hero===========================*/
-
-/* nav {
-    position: relative;
-    margin: 1rem;
-    margin-top: 0;
-    width: fit-content;
-
-    a {
-        font-size: calc(8px + 1.5vw);
-        position: relative;
-        margin: 2rem;
-    }
+form h3 {
+    color: black;
+    font-size: 1vw;
+    font-weight: 800;
 }
 
-.nav {
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    transition: .75s;
-    padding-top: 1rem;
-    border-radius: 1rem;
-    border: .2rem solid black;
-    box-shadow: 5px 5px black;
-    background-color: var(--section);
-    transition: .2s;
-} */
+form input,
+textarea {
+    color: black;
+    font-size: 1rem;
+    border: 0;
+    margin: .625rem 0;
+    padding: 1.25rem;
+    outline: double;
+    outline-color: var(--accent);
+    background-color: var(--offWhite);
+    resize: none;
+}
+
+form button {
+    border-radius: .625rem;
+    margin-top: 1rem;
+    padding-left: auto;
+    padding-right: auto;
+    width: 100%;
+    font-size: 2rem;
+    max-width: 600px;
+}
 
 .navbar {
     width: 5rem;
@@ -281,14 +251,13 @@ form {
     box-shadow: 5px 5px black;
     border: 2px solid black;
     transition: width 200ms ease;
+    z-index: 9999;
 }
 
-.navbar:hover {
-    width: 16rem;
 
-    .link-text {
-        display: block;
-    }
+
+.navbar:hover .logo i {
+    transform: rotate(180deg) translate(2.5rem, 0);
 }
 
 .navList {
@@ -300,11 +269,8 @@ form {
     align-items: center;
 }
 
-.logo {
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    text-align: center;
+.nav-item:last-child {
+    margin-top: auto;
 }
 
 
@@ -312,20 +278,35 @@ form {
     width: 5rem;
 }
 
-.nav-item:last-child {
-    margin-top: auto;
-}
+
 
 .nav-link {
     display: flex;
     align-items: center;
     height: 5rem;
     text-decoration: none;
+}
 
-    i {
-        min-width: 4rem;
-        margin: 01.5rem
-    }
+.nav-link i {
+    min-width: 4rem;
+    margin: 01.5rem
+}
+
+.logo {
+    width: 5rem;
+    align-items: center;
+    align-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .3ch;
+    margin-bottom: 3rem;
+}
+
+.logo i {
+    width: 1px;
+    transform: rotate(0deg);
+    transition: transform var(--logo-transition);
 }
 
 .link-text {
@@ -342,6 +323,7 @@ form {
     width: 90vw;
     display: block;
     padding: 5rem;
+
     padding-top: .1rem;
     padding-bottom: 15vh;
 
@@ -380,6 +362,7 @@ form {
     display: flex;
     padding-bottom: 4%;
     margin: 4rem;
+
     max-height: fit-content;
     border-radius: 2rem;
     border: 2px solid black;
@@ -432,7 +415,6 @@ form {
 
 .headshot:hover {
     filter: none;
-    transition: .2s;
 }
 
 .headshot-container {
@@ -454,6 +436,7 @@ form {
 
 .project-card,
 .skill-card {
+
     position: relative;
     padding: .5rem;
     border-radius: 1.5rem;
@@ -462,27 +445,21 @@ form {
 }
 
 .project-card {
-
-    width: 23rem;
-    height: 26rem;
     margin: 1rem;
     margin-top: 2rem;
-    transition: .5s;
+    transition: var(--button-transition);
+}
 
-    a {
-        text-decoration: none;
-        color: var(--accent);
-        margin-top: 30px;
-    }
+.project-card a {
+    text-decoration: none;
+    color: var(--accent);
+    margin-top: 30px;
 }
 
 .skill-card {
-    width: fit-content;
-    height: fit-content;
 
     margin: 1rem;
-    margin-top: 4rem;
-    transition: .5s;
+    transition: var(--button-transition);
 }
 
 .project-card:hover,
@@ -500,9 +477,10 @@ form {
     font-weight: 400;
     margin-right: auto;
     margin-left: auto;
-    width: 20rem;
-    height: 35%;
+    width: fit-content;
+    height: 15vh;
     display: block;
+    overflow: hidden;
 }
 
 
@@ -513,164 +491,122 @@ form {
     overflow: hidden;
 }
 
-.skill-card {
-    h3 {
-        font-size: 1.25vw;
-        font-weight: 300px;
-        margin: 2%;
-    }
+.skill-card h3 {
+    font-size: 1.25vw;
+    font-weight: 300px;
+    margin: 2%;
+}
 
-    svg {
-        width: 15vw;
-        height: 20vh;
-        padding: .25rem;
-    }
+.skill-card svg {
+    padding-top: 1rem;
+    width: 15vw;
+    height: 20vh;
+}
+
+.skill-card h3 {
+    font-size: 2vw;
+    font-weight: 200px;
+    margin: 2%;
 }
 
 
 /*=======================Footer===========================*/
 
 .socials {
-    /* padding-bottom: 5rem; */
+    margin-bottom: 4vh;
     display: flex;
     justify-content: center;
-    /* margin-top: 5rem; */
 }
 
 
 
 .contact-form {
-    width: 100%;
-    height: 50vh;
-    /* margin-top: 3.7rem; */
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    width: 80vw;
+    padding-left: 10vw;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.contact-form h3 {
+    font-size: 2rem;
+}
 
-@media only screen and (max-width: 1400px) {
-
-    .alt-color-h2 {
-        margin-bottom: 3rem;
-        color: var(--card);
+@media only screen and (min-width:700px) {
+    main {
+        margin-left: 9rem;
     }
 
-    .projects {
-        display: flex;
-        flex-wrap: wrap;
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
     }
 
-    .project-description {
-        font-size: .8rem;
-        font-weight: 300;
-        width: 15rem;
+    .navbar:hover {
+        width: 16rem;
     }
 
-    .my-information {
-        max-width: 45vw;
-        margin-right: 0;
-        margin-left: 0;
-        padding: .5rem;
+    .navbar:hover .link-text {
+        display: inline;
     }
 
-    .hero-text {
-        margin-bottom: 80%;
-        margin-left: 5%;
-        cursor: default;
-        display: block;
+    .project-card,
+    .skill-card {
+        width: 15vw;
+        height: 15vw;
     }
 
-    .hamburger {
-        display: block;
-        position: relative;
-        border: 0;
-        background-color: transparent;
-        color: var(--offWhite);
-        font-size: 30px;
-        margin: 2rem;
-        left: 90vw;
-        align-self: flex-start;
+    footer {
+        margin-left: -5rem;
+        height: 60%;
+        width: 100vw;
     }
 
-    ul {
-        display: none;
-        background-color: black;
-        padding-bottom: 20px;
-    }
-
-    /* ul.show {
-        display: block;
-        list-style-type: none;
-        width: 40%;
-        justify-content: space-around;
-        font-size: 30px;
-        transition: .5s;
-    } */
-
-
-    .stayGreen {
-        background-color: #56A15650;
-        border: .02rem solid var(--offWhite);
-    }
-
-    .logo {
-        position: absolute;
-        top: 1%;
-        left: 0;
-        margin-top: 0;
-        /* display: none; */
-    }
-
-    .headshot {
-        margin: 1rem;
-        width: 20rem;
-        height: 20rem;
-    }
-
-    .skill-card svg {
-        width: 30vw;
-        padding: 0rem;
-    }
-
-    .skill-card h3 {
-        font-size: 2vw;
-        font-weight: 200px;
-        margin: 2%;
+    .nav-item:last-child {
+        margin-top: auto;
     }
 }
 
 @media only screen and (max-width: 700px) {
-    p {
-
-        font-weight: 200;
+    main {
+        margin-left: 0rem;
     }
 
-    h2 {
-        margin-top: 12%;
-        font-size: 2rem;
-        font-weight: 400;
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 4rem;
+        padding-left: 10%;
     }
 
-    .skill-card h3 {
-        font-size: 3vw;
-        font-weight: 200px;
-        margin: 2%;
-    }
-
-    .skill-card svg {
-        width: 50vw;
-
-    }
-
-    .project-card {
-        width: fit-content;
-        margin-bottom: 4rem;
-    }
-
-    .headshot-container {
+    .logo {
         display: none;
     }
+
+    .navList {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .nav-item:last-child {
+        margin-left: auto;
+    }
+
+    .subsection,
+    .subsection-alt {
+        width: 80vw;
+    }
+
+    footer {
+        padding: 5vw;
+        height: 60%;
+        width: 100vw;
+    }
+
 }
