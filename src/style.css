@@ -491,16 +491,10 @@ form button {
     overflow: hidden;
 }
 
-.skill-card h3 {
-    font-size: 1.25vw;
-    font-weight: 300px;
-    margin: 2%;
-}
-
 .skill-card svg {
-    padding-top: 1rem;
-    width: 15vw;
-    height: 20vh;
+    padding: 1vw;
+    width: 10vw;
+    height: 10vw;
 }
 
 .skill-card h3 {
@@ -600,11 +594,11 @@ form button {
 
     .subsection,
     .subsection-alt {
-        width: 80vw;
+        width: 75vw;
     }
 
     footer {
-        padding: 5vw;
+        /* padding: 5vw; */
         height: 60%;
         width: 100vw;
     }
