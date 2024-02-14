@@ -1,4 +1,4 @@
-/*=======================Main===========================*/
+/*===============r========Main===========================*/
 
 :root {
     --offWhite: #F2F2F2;
@@ -43,9 +43,6 @@ body {
     justify-content: center;
 }
 
-main {
-    margin-left: -8rem;
-}
 
 img {
     max-width: 100%;
@@ -108,7 +105,6 @@ button:hover,
     background-color: var(--cardHover);
     cursor: pointer;
     color: var(--offWhite);
-    /* transition: .5s; */
     transform: translate(-3px, -3px);
 }
 
@@ -247,7 +243,8 @@ form button {
     width: 5rem;
     height: 100vh;
     position: fixed;
-    background-color: var(--section);
+    margin-right: 15%;
+    background-color: var(--fade);
     box-shadow: 5px 5px black;
     border: 2px solid black;
     transition: width 200ms ease;
@@ -339,7 +336,6 @@ form button {
 }
 
 .hero-text {
-    margin-left: 5%;
     cursor: default;
     padding-top: 5rem;
     color: var(--offWhite);
@@ -364,6 +360,7 @@ form button {
     margin: 4rem;
 
     max-height: fit-content;
+    min-width: fit-content;
     border-radius: 2rem;
     border: 2px solid black;
     box-shadow: 5px 5px black;
@@ -463,9 +460,10 @@ form button {
 
 .skill-card {
 
-    margin: 1rem;
+    margin: 2rem;
     transition: var(--button-transition);
 }
+
 
 .project-card:hover,
 .skill-card:hover {
@@ -529,9 +527,7 @@ form button {
 }
 
 @media only screen and (min-width:700px) {
-    main {
-        margin-left: 9rem;
-    }
+
 
     .navbar {
         top: 0;
@@ -554,7 +550,7 @@ form button {
     }
 
     footer {
-        margin-left: -5rem;
+
         height: 60%;
         width: 100vw;
     }
@@ -569,6 +565,7 @@ form button {
         height: 10rem;
     }
 }
+
 
 @media only screen and (max-width: 700px) {
     main {
@@ -610,7 +607,7 @@ form button {
     }
 
     footer {
-        /* padding: 5vw; */
+        padding: 5vw;
         height: 60%;
         width: 100vw;
     }
@@ -620,5 +617,4 @@ form button {
         width: 15vw;
         height: 15vw;
     }
-
 }
