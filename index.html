@@ -53,7 +53,7 @@
         </section>
         <hr />
 
-
+        <!--https://www.youtube.com/watch?v=1CZhGDU5cWM-->
         <section class="subsection" id="about-me">
             <div class="my-information">
                 <h2>About Me</h2>
@@ -208,14 +208,71 @@
 
         <section class="subsection-alt" id="my-projects">
             <h2 class="alt-color-h2">Software Projects</h2>
-            <div class="projects-container">
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2" checked>
+                <div id="slides">
+                    <div id="inner">
+                        <div class="slide slide_1">
+                            <div class="slide-content">
+                                <h2>Slide 1</h2>
+                                <p>Content</p>
+                            </div>
+                        </div>
+                        <div class="slide slide_2">
+                            <div class="slide-content">
+                                <h2>Slide 2</h2>
+                                <p>Content</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="overflow"></div>
+                </div>
+            </div>
+
+            <div id="controls">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+            </div>
+            <div id="bullets">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+            </div>
+            <!--1-->
+            <!-- <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/images/Picture1.png" alt="Website">
+                    </div>
+                    <hr />
+                    <h2>Readable Password Generator</h2>
+                    <p class="project-description">Password generator for readable, secure passwords. Has options for
+                        Simple word passwords, full random passwords, and beginning research on a new version using a
+                        Markov-based algorithm</p>
+                </div> -->
+            <!--2-->
+            <!-- <div class="project-card">
+                    <div class="project-image">
+                        <img src="src/images/Picture1.png" alt="Website">
+                    </div>
+                    <hr />
+                    <h2>Readable Password Generator</h2>
+                    <p class="project-description">Password generator for readable, secure passwords. Has options for
+                        Simple word passwords, full random passwords, and beginning research on a new version using a
+                        Markov-based algorithm</p>
+                </div>
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="src/images/Picture1.png" alt="Website">
                     </div>
-                </div>
-            </div>
-            </div>
+                    <hr />
+                    <h2>Readable Password Generator</h2>
+                    <p class="project-description">Password generator for readable, secure passwords. Has options for
+                        Simple word passwords, full random passwords, and beginning research on a new version using a
+                        Markov-based algorithm</p>
+                </div>-->
+
+
 
         </section>
 
