@@ -277,7 +277,7 @@ form button {
     font-weight: bold;
     color: white;
     display: block;
-    padding-left: 25px;
+
 }
 
 .navList li button {
@@ -285,28 +285,20 @@ form button {
     margin: 0;
     font-weight: bold;
     color: white;
-
+    width: fit-content;
+    height: 6vh;
 }
 
 .scroll {
     background: #35344da0;
     border: 2px solid black;
-    top: -100px;
+    top: 20px;
     border-radius: 20px;
     width: fit-content;
-    animation: fadedown .4s ease 1s forwards;
+    /* animation: fadedown .4s ease 1s forwards; */
 }
 
 /* https://www.youtube.com/watch?v=yX8lAtJCxwo */
-@keyframes fadedown {
-    0% {
-        top: -100px;
-    }
-
-    100% {
-        top: 20px;
-    }
-}
 
 .link-text {
     display: none;
@@ -428,7 +420,7 @@ form button {
     padding-top: 2rem;
 }
 
-/*=======================Card===========================*/
+/*=======================Skill Card===========================*/
 
 .projects,
 .skills {
@@ -439,7 +431,6 @@ form button {
     margin: 3%;
 }
 
-.project-card,
 .skill-card {
 
     position: relative;
@@ -447,54 +438,16 @@ form button {
     border-radius: 1.5rem;
     background-color: var(--card);
     border: .15rem solid var(--cardHover);
-}
-
-.project-card {
-    margin: 1rem;
-    margin-top: 2rem;
-    transition: var(--button-transition);
-}
-
-.project-card a {
-    text-decoration: none;
-    color: var(--accent);
-    margin-top: 30px;
-}
-
-.skill-card {
-
     margin: 2rem;
     transition: var(--button-transition);
 }
 
-
-.project-card:hover,
 .skill-card:hover {
     background-color: #7db17d;
     border: .15rem solid black;
     box-shadow: 5px 5px black;
     transition: .25s;
     transform: translate(-3px, -3px);
-}
-
-
-.project-description {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-right: auto;
-    margin-left: auto;
-    width: fit-content;
-    height: 15vh;
-    display: block;
-    overflow: hidden;
-}
-
-
-.project-image {
-    max-height: 200px;
-    border-radius: .625rem;
-    margin-top: -60px;
-    overflow: hidden;
 }
 
 
@@ -505,6 +458,18 @@ form button {
     margin: 2%;
 }
 
+/*=======================Projects===========================*/
+.project-card .project-image {
+    height: 150px;
+    width: 150px;
+}
+
+.project-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
 
 /*=======================Footer===========================*/
 
@@ -531,25 +496,9 @@ form button {
 
 @media only screen and (min-width:700px) {
 
-
-    /* .navbar {
-        top: 0;
-        width: 5rem;
-        height: 100vh;
-    }
-
-    .navbar:hover {
-        width: 16rem;
-    }
-
-    .navbar:hover .link-text {
-        display: inline;
-    } */
-
-    .project-card,
     .skill-card {
-        width: 15rem;
-        height: 15rem;
+        width: 12vw;
+        height: 12vw;
     }
 
     footer {
@@ -564,40 +513,13 @@ form button {
 
     .skill-card svg {
         padding: 1vw;
-        width: 10rem;
-        height: 10rem;
+        width: 7vw;
+        height: 7vw;
     }
 }
 
 
 @media only screen and (max-width: 700px) {
-    main {
-        margin-left: 0rem;
-    }
-
-    /* .navbar {
-        bottom: 0;
-        width: 100vw;
-        height: 4rem;
-        padding-left: 10%;
-    } */
-
-    /* .logo {
-        display: none;
-    } */
-
-    /* .navList {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .nav-link {
-        justify-content: center;
-    }
-
-    .nav-item:last-child {
-        margin-left: auto;
-    } */
 
     .skill-card {
         width: 20vw;
